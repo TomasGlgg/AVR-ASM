@@ -7,12 +7,12 @@ Atmega328P
 :black_square_button: Для полного просмотра таблицы команд разверните файл
 
 ## 3 вида памяти в AVR:
-### 1) Flash 16-bits - память программ**
+### 1) Flash 16-bits - память программ
 
 Не очень много памяти.
 0x0000 - 0xFFFF
 
-### 2) SRAM 8-bits   - Static Random access memory**
+### 2) SRAM 8-bits   - Static Random access memory
 
 Лучше хранит данные, без необходимости обновлять данные.
 0x0000 - 0xFFFF
