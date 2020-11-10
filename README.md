@@ -23,7 +23,7 @@ Atmega328P
 
 3) 0x0060 - RAMEND - Внутренняя SRAM (хранить что хочется)
 
-4) RAMEND+1 - 0xFFF - Внешняя SRAM
+4) RAMEND+1 - 0xFFFF - Внешняя SRAM
 
 #### Регистры:
 Всегда 32 регистра. В каждом по байту.
@@ -39,13 +39,8 @@ Atmega328P
 2) Y - 28, 29
 3) Z - 30, 31
 
-R0  - 0x00
+![alt text](https://raw.githubusercontent.com/TomasGlgg/AVR-ASM/main/AVR-registers.PNG)
 
-R1  - 0x01
-
-...
-
-R31 - 0x1F
 
 ### 3) EEPROM 8-bits 
 Данные между включениями и выключениями
