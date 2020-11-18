@@ -143,3 +143,12 @@ A = A xor B
 LDI R28, low(1234) 
 LDI R29, high(1234) 
 ```
+**Цикл со счетчиком используя условный переход BRNE:**
+```asm
+    LDI R16, 4
+
+LOOP:
+    NOP
+    DEC R16
+    BRNE LOOP
+```
