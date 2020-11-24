@@ -165,7 +165,7 @@ if (A == B) {
 ```
 ASM с использованием BREQ и RJMP:
 ```asm
-SUB R!6, R17
+SUB R16, R17
 BREQ TR
     ; False (3 такта)
 RJMP EN
