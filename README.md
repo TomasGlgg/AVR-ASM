@@ -152,3 +152,46 @@ LOOP:
     DEC R16
     BRNE LOOP
 ```
+
+**Если A = B, выполнить True, иначе выполнить False:**
+
+C:
+```c
+if (A == B) {
+    // True
+} else {
+    // False
+}
+```
+ASM с использованием BREQ и RJMP:
+```asm
+SUB R!6, R17
+BREQ TR
+    ; False (3 такта)
+RJMP EN
+TR:
+    ; True (2 такта)
+EN:
+```
+ASM с использованием BRNE и RJMP:
+```asm
+SUB R16, R17
+BRNE FL
+    ; True (3 такта)
+RJMP EN
+FL:
+    ; False (2 такта)
+EN:
+```
+ASM с использованием BRNE и BREQ:
+```asm
+SUB R16, R17
+BRNE EN
+    ; True ==
+EN:
+
+SUB R16, R17
+BREQ EN
+    ; True !=
+EN:
+```
