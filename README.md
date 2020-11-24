@@ -240,7 +240,7 @@ BRCC EN
 EN:
 ```
 
-**Если A > B, выполнить True, иначе выполнить False:**
+**Если A < B, выполнить True, иначе выполнить False:**
 
 С:
 ```c
@@ -254,20 +254,20 @@ ASM с использованием BRCS и RJMP:
 ```asm
 SUB R16, R17
 BRCS TR
-    ; False (A >= B)
+    ; False (A >= B) (3 такта)
 RJMP EN
 TR:
-    ; True (A < B)
+    ; True (A < B) (2 такта)
 EN:
 ```
 ASM с использованием BRCC и RJMP:
 ```asm
 SUB R16, R17
 BRCC FL
-    ; True (A < B)
+    ; True (A < B) (3 такта)
 RJMP EN
 FL:
-    ; False (A >= B)
+    ; False (A >= B) (2 такта)
 EN:
 ```
 ASM с использованием BRCC:
