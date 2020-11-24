@@ -239,3 +239,48 @@ BRCC EN
     ; True (A > B)
 EN:
 ```
+
+**Если A > B, выполнить True, иначе выполнить False:**
+
+С:
+```c
+if (A < B) {
+    // True
+} else {
+    // False
+}
+```
+
+```asm
+SUB R16, R17
+BRCS TR
+    ; False (A >= B)
+RJMP EN
+TR:
+    ; True (A < B)
+EN:
+```
+
+```asm
+SUB R16, R17
+BRCC FL
+    ; True (A < B)
+RJMP EN
+FL:
+    ; False (A >= B)
+EN:
+```
+
+```asm
+SUB R16, R17
+BRCC EN
+    ; True (A < B)
+EN:
+```
+
+```asm
+SUB R17, R16
+BRCS EN
+    ; True (A <= B)
+EN:
+```
