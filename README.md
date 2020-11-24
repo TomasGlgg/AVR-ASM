@@ -250,7 +250,7 @@ if (A < B) {
     // False
 }
 ```
-
+ASM с использованием BRCS и RJMP:
 ```asm
 SUB R16, R17
 BRCS TR
@@ -260,7 +260,7 @@ TR:
     ; True (A < B)
 EN:
 ```
-
+ASM с использованием BRCC и RJMP:
 ```asm
 SUB R16, R17
 BRCC FL
@@ -270,14 +270,14 @@ FL:
     ; False (A >= B)
 EN:
 ```
-
+ASM с использованием BRCC:
 ```asm
 SUB R16, R17
 BRCC EN
     ; True (A < B)
 EN:
 ```
-
+ASM с использованием BRCS:
 ```asm
 SUB R17, R16
 BRCS EN
