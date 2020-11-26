@@ -39,7 +39,7 @@ Atmega328P
 2) Y - 28, 29
 3) Z - 30, 31
 
-![alt text](https://raw.githubusercontent.com/TomasGlgg/AVR-ASM/main/AVR-registers.PNG)
+![Регистры](https://raw.githubusercontent.com/TomasGlgg/AVR-ASM/main/AVR-registers.PNG)
 
 
 ### 3) EEPROM 8-bits 
@@ -138,11 +138,13 @@ A = A xor B
 B = A xor B
 A = A xor B
 ```
+
 **Загрузить старшие биты числа 1234 в регистр R28, а в регистр R29 записать младшие биты числа 1234:**
 ```asm
 LDI R28, low(1234) 
 LDI R29, high(1234) 
 ```
+
 **Цикл со счетчиком используя условный переход BRNE:**
 ```asm
     LDI R16, 4
